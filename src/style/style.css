@@ -1,0 +1,1051 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('./apperance.css');
+@import url('./ranks.css');
+@import url('./login.css');
+@import url('./register.css');
+@import url('./transfer.css');
+@import url('./userpage.css');
+
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.swal2-container {
+    margin-right: 10px;
+}
+
+.swal2-popup.swal2-toast {
+    border-radius: 10px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    margin: 0 0.5em;
+}
+
+.swal2-popup.swal2-toast .swal2-html-container {
+    margin: 0.2em 0.5em !important;
+}
+
+.top-toolbar {
+    background-color: rgba(200,200,200,0.15);
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.login-page #container {
+    display: flex;
+    justify-content: center !important;
+    height: 97vh !important;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 50vw;
+}
+
+.left-content {
+    display: flex;
+    flex-grow: 0;
+}
+
+.center-content {
+    width: 500px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.right-content {
+    display: flex;
+    flex-grow: 0;
+}
+
+.app-logo {
+    width: 132px;
+    height: 40px;
+    background: url("/src/assets/wallet.svg");
+    background-size: cover;
+}
+
+.store-logo {
+    width: 159px;
+    height: 40px;
+    background: url("/src/assets/store_1652294374.svg");
+    background-size: cover;
+}
+
+.corp-logo {
+    width: 164px;
+    height: 40px;
+    background: url("/src/assets/astrum.svg");
+    background-size: cover;
+    text-indent: -110px;
+    overflow: hidden;
+}
+
+.user-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-menu:hover {
+    border-color: rgba(87,51,209,.5);
+}
+
+.user-pic {
+    border-radius: 50%;
+    width: 100%;
+}
+
+#main {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.coin-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    border-radius: 18px;
+    padding: 55px 0 55px;
+    align-items: center;
+}
+
+.coin-logo .coin-icon {
+    width: 90px;
+    height: 90px;
+    background: url("../assets/astrocoin-coin.webp");
+    background-size: cover;
+    overflow: hidden;
+    text-indent: 100%;
+    margin-bottom: 25px;
+}
+
+.coin-currency {
+    margin-left: 8px;
+    font-size: 28px;
+}
+.coin-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    gap: 40px;
+}
+
+.coin-buttons a {
+    text-decoration: none;
+}
+
+.coin-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.coin-btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(87, 51, 209);
+    font-size: 22px;
+    fill: #fff;
+    stroke: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
+.coin-btn-title {
+    font-size: 15px;
+    margin-top: 8px;
+    color: #5733d1;
+}
+
+.coin-body {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 18px;
+}
+
+.main-tools {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.main-tools::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.main-tools::before {
+    content: '';
+    height: 3px;
+    width: 50%;
+    border-radius: 15px;
+    background-color: #5733d1;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.main-tools.left::before {
+    left: 0;
+}
+
+.main-tools.right::before {
+    left: 50%;
+}
+
+.main-tools .story-btn.active {
+    color: #5733d1;
+}
+
+.main-tools .story-btn {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    margin: 0 5px;
+    color: #bababa;
+    border-radius: 12px;
+}
+
+.main-tools .story-btn:focus-visible {
+    background: none;
+}
+
+.main-tools .story-btn:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.story {
+    display: flex;
+    width: 200%;
+    position: relative;
+    left: 0;
+}
+
+.story.transfers {
+    left: 0;
+}
+
+.story.buy {
+    left: -100%;
+}
+
+#story-transfers {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 15px;
+}
+
+#story-buy {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 15px;
+}
+
+.story.transfer #story-transfers,
+.story.buy #story-buy {
+    overflow: auto;
+    visibility: visible;
+    height: auto;
+}
+
+.transfers-date {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #555;
+}
+
+.failed-coin,
+.receive-coin,
+.remove-coin {
+    display: flex;
+    flex-direction: row;
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.failed-coin .status-icon,
+.receive-coin .status-icon,
+.remove-coin .status-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.remove-coin .status-icon {
+    background: rgba(255, 0, 0, 0.45);
+}
+
+.failed-coin .status-icon {
+    background: rgba(230, 230, 80, 0.6) !important;
+}
+
+.receive-coin .status-icon {
+    background: rgba(0, 255, 0, 0.3) !important;
+}
+
+.failed-coin .status-icon .ai,
+.receive-coin .status-icon .ai,
+.remove-coin .status-icon {
+    font-size: 25px;
+}
+
+.failed-coin .status-content,
+.receive-coin .status-content,
+.remove-coin .status-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+}
+
+.failed-coin .status-content .status-name,
+.receive-coin .status-content .status-name,
+.remove-coin .status-content .status-name {
+    font-size: 18px;
+}
+
+.failed-coin .status-content .status-coin,
+.receive-coin .status-content .status-coin,
+.remove-coin .status-content .status-coin {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #a7a7a7;
+}
+
+
+#footer {
+    display: flex;
+    margin-top: 30px;
+    padding: 10px 0;
+    color: #a7a7a7;
+    font-size: 15px;
+}
+
+#footer .copyright {
+    flex-grow: 0;
+}
+
+#footer .wallet-name {
+    font-weight: 500;
+    color: #888;
+}
+
+#footer .ai {
+    color: #5733d1;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #a7a7a7;
+    transition: 0.3s;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: #5733d1;
+}
+
+
+
+#modals {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    width: 50vw;
+}
+
+#modal-back.active {
+    background: rgba(0,0,0,.25);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+#user-menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 15px #ccc;
+    position: absolute;
+    top: 95px;
+    right: 0;
+    z-index: 8;
+}
+
+#user-menu.active {
+    top: 75px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#user-menu .user-person {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#user-menu .user-person-pic {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #e2e2e2;
+    border-radius: 50px;
+}
+
+#user-menu .user-person:hover {
+    background: #eeee;
+}
+#user-menu .user-person:hover .user-name,
+#user-menu .user-person:hover .user-person-pic {
+    color: #5733d1;
+    border-color: rgba(87,51,209,.7);
+}
+
+.user-person .user-info {
+    padding-top: 5px;
+    margin: 0 15px;
+}
+
+.user-info .user-name {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-name svg {
+    margin-left: 5px;
+    margin-top: 0.25px;
+}
+
+.user-info .user-email {
+    font-size: 15px;
+    color: #bababa;
+}
+
+.other-user-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.other-user-menu .menu-item a {
+    display: block;
+    margin: 2px 0;
+    padding: 8px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.other-user-menu .menu-item:hover a {
+    background: #eee;
+}
+
+#receive-coin {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    box-shadow: 0 0 15px #c2c2c2;
+    position: absolute;
+    top: 155px;
+    z-index: 8;
+}
+
+#log-out {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(0.9);
+    box-shadow: 0 0 15px #c2c2c2;
+    position: absolute;
+    top: 155px;
+    z-index: 8;
+}
+
+#log-out .modal-title {
+    justify-content: center;
+}
+
+#log-out .modal-body {
+    margin-top: 12px;
+}
+
+#log-out .modal-content {
+    text-align: center;
+    padding: 20px;
+}
+
+#log-out .log-out-query {
+    width: 250px;
+}
+
+#log-out .modal-tools {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#log-out .modal-tools .btn + .btn {
+    border-left: 1px solid #ccc;
+}
+
+#log-out .modal-tools .btn {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#log-out .modal-tools .btn:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+#log-out .modal-tools .log-out-verify {
+    color: #FF0000;
+}
+
+#receive-coin.active,
+#log-out.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.modal-header .modal-title {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal-header .modal-tools {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-header .modal-tools .ai {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-top: 15px;
+}
+
+.modal-body .receive-qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.modal-body .receive-qrcode img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body .receive-hash {
+    margin-top: 15px;
+}
+
+.modal-body .receiver-label,
+.modal-body .send-label {
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #555;
+    position: relative;
+}
+
+.modal-body input {
+    border: none;
+    min-width: 240px;
+    background-color: #fff;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.modal-body .send-comment textarea {
+    border: none;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 100px;
+    background-color: #fff;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.modal-body .receive-hash .ai {
+    margin-top: 10px;
+    color: #aaa;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: -2px 0px 5px 5px #fff;
+    position: absolute;
+    right: 30px;
+}
+
+.modal-body .send-hash .ai {
+    margin-top: 10px;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+}
+
+.modal-body .receive-share {
+    margin-top: 15px;
+}
+
+.modal-body .receive-share .share-btn i {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.modal-body .receive-share .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5733d1;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#send-coin {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(0.9);
+    box-shadow: 0 0 15px #c2c2c2;
+    position: absolute;
+    top: 155px;
+    z-index: 8;
+}
+
+#send-coin.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#send-coin .modal-body .user-info {
+    margin: 5px 10px 10px;
+    color: #333;
+    font-size: 15px;
+}
+
+#send-coin .modal-body .qr-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    animation: 0.4s qr-view;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+
+#send-coin .qr-view .qrcode-stream-wrapper {
+    width: 250px;
+    height: 250px;
+    background: #e2e2e2;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@keyframes qr-view {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#send-coin .qr-view .close-modal {
+    border: none;
+    outline: none;
+    padding: 12px 55px;
+    margin-top: 70px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#send-coin .qr-view .close-modal:hover {
+    background: #4527ae;
+    color: #fff;
+}
+
+
+
+#cheque-coin {
+    width: 25vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    box-shadow: 0 0 15px #c2c2c2;
+    position: fixed;
+    top: 95px;
+    z-index: 8;
+}
+
+#cheque-coin.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#cheque-coin .modal-body {
+    padding:0 20px 20px;
+}
+
+#cheque-coin .top-brand {
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+    border-bottom: 1px solid #ccc;
+}
+
+#cheque-coin .top-brand .corp-logo {
+    width: 123px;
+    height: 30px;
+}
+
+#cheque-coin .cheque-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#cheque-coin .cheque-header .cheque-status-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+#cheque-coin .cheque-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#cheque-coin .cheque-date .cheque-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#cheque-coin .cheque-date .cheque-price {
+    font-size: 15px;
+    color: #777;
+}
+
+#cheque-coin .cheque-block {
+    margin: 15px 0;
+}
+
+#cheque-coin .cheque-block .cheque-title {
+    color: #888;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+#cheque-coin .cheque-block .cheque-content {
+    color: #000;
+    font-size: 18px;
+}
+
+#container-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: Fredoka,sans-serif;
+    position: relative
+}
+
+#container-b .block-user {
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center
+}
+
+#container-b .block-user .user-name {
+    font-weight: 600
+}
+
+#container-b .block-title {
+    margin-top: 5px;
+    font-size: 35px;
+    text-align: center;
+    font-family: Fredoka,sans-serif
+}
+
+#container-b .block-info {
+    max-width: 560px;
+    margin-top: 50px;
+    color: #555
+}
+
+#container-b .block-info .info-title {
+    font-size: 22px
+}
+
+#container-b .block-info ul li+li {
+    margin-top: 10px
+}
+
+#container-b .block-tools {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px
+}
+
+#container-b .block-tools .contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 25px);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    transition: .3s
+}
+
+#container-b .block-tools .contact-btn svg {
+    margin-right: 15px
+}
+
+.telegram {
+    background: #2aabee
+}
+
+.telegram:hover {
+    background: #2288bc
+}
+
+.discord {
+    background: #5865f2
+}
+
+.discord:hover {
+    background: #4953c8
+}
+
+div .verify-ion {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-left: 5px;
+}
+
+.verify-ion svg {
+    position: relative;
+    top: -6px;
+}
+
+.verify-ion:hover .verification-toolTips {
+    margin-top: 5px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.verify-ion .verification-toolTips {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    text-align: center;
+    width: 140px;
+    margin-top: 10px;
+    margin-left: -80px;
+    font-size: 13px;
+    color: #999;
+    -webkit-text-fill-color: #999;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 15px 8px 8px;
+    box-shadow: 0 0 10px #ccc;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.verify-ion .verification-toolTips::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+@media screen and (max-width: 1370px) {
+    #header, #main, #modals {
+        width: 70vw;
+    }
+    #cheque-coin {
+        width: 30vw;
+    }
+    .main-tools .story-btn:hover {
+        background: transparent !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #cheque-coin {
+        width: auto;
+    }
+    .main-tools .story-btn:hover {
+        background: transparent !important;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    #header, #main, #modals {
+        width: 85vw;
+    }
+    .main-tools .story-btn:hover {
+        background: transparent !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #header, #main, #modals {
+        width: 95vw;
+    }
+    .main-tools .story-btn:hover {
+        background: transparent !important;
+    }
+}

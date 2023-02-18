@@ -1,0 +1,167 @@
+#container #transfer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*margin-top: 10%;*/
+    background: #fff;
+    border-radius: 18px;
+    padding: 15px;
+    width: 380px;
+    box-shadow: 0 0 15px #eee;
+}
+
+.transfer-header {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 30px;
+}
+
+.transfer-header .hr-line {
+    width: 5px !important;
+    background: #00ebb0;
+    margin-left: 15px;
+    margin-bottom: -5px;
+    border-radius: 10px;
+}
+
+.transfer-header .header-title {
+    font-size: 28px;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-left: 15px;
+    color: #5733d1;
+}
+
+#transfer-page .transfer-userDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 18px 0;
+}
+
+#transfer-page .transform_userPic {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#transfer-page .transform_userPic img {
+    width: 100%;
+    height: 100%;
+}
+
+#transfer-page .transfer-userName {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+#transfer-page .transfer-userName .verify-ion {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-left: 5px;
+}
+
+#transfer-page .transfer-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#transfer-page .transfer-form .transfer-desc {
+    color: #bababa;
+    padding: 0 10px;
+}
+
+#transfer-page .form-modal {
+    margin-top: 10px;
+}
+
+#transfer-page .form-control {
+    width: 314px;
+    margin: 15px 0;
+}
+
+#transfer-page .form-control label {
+    display: block;
+    color: #aaa;
+    padding: 5px 10px;
+}
+
+#transfer-page .form-control input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #eee;
+    padding: 12px 18px;
+    font-size: 16px;
+    outline: none;
+}
+
+#transfer-page .form-control textarea {
+    border: none;
+    min-width: calc(100% + 12px);
+    max-width: calc(100% + 12px);
+    min-height: 100px;
+    background-color: #eee;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+#transfer-page .form-control input:focus-visible {
+    box-shadow: 0 0 0 2px rgba(87, 51, 209, .5);
+}
+
+#transfer-page .form-control.submit-btn {
+    width: 350px;
+}
+
+#transfer-page .form-control.submit-btn button {
+    width: 100%;
+    background: #5733d1;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    outline: none !important;
+}
+
+#transfer-page .form-control.submit-btn button .ai {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+#transfer-page .form-control.submit-btn button:hover {
+    background: #4527ae;
+}
+
+#transfer-page .forgot-pass:hover {
+    color: #4527ae;
+}
+@media screen and (max-width: 518px) {
+    .transfer-header {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container #transfer-page {
+        background: #f4f4f4;
+        box-shadow: none;
+    }
+
+    #transfer-page .form-control input,
+    #transfer-page .form-control textarea {
+        background-color: #fff !important;
+    }
+}
