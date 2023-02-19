@@ -79,23 +79,23 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .app-logo {
-    width: 132px;
+    width: 181px;
     height: 40px;
-    background: url("/src/assets/wallet.svg");
+    background: url("/src/assets/wallet3d.webp");
     background-size: cover;
 }
 
 .store-logo {
     width: 159px;
     height: 40px;
-    background: url("/src/assets/store_1652294374.svg");
+    background: url("/src/assets/store3d.webp");
     background-size: cover;
 }
 
 .corp-logo {
     width: 164px;
     height: 40px;
-    background: url("/src/assets/astrum.svg");
+    background: url("/src/assets/astrum.webp");
     background-size: cover;
     text-indent: -110px;
     overflow: hidden;
@@ -115,7 +115,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .user-menu:hover {
-    border-color: rgba(87,51,209,.5);
+    border-color: rgba(55, 33, 214,.5);
 }
 
 .user-pic {
@@ -129,7 +129,6 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     justify-content: center;
     padding: 0;
-    overflow: hidden;
     margin-top: 10px;
 }
 
@@ -141,12 +140,13 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 18px;
     padding: 55px 0 55px;
     align-items: center;
+    box-shadow: 0 0 15px #eee;
 }
 
 .coin-logo .coin-icon {
     width: 90px;
     height: 90px;
-    background: url("../assets/astrocoin-coin.webp");
+    background: url("../assets/coin.webp");
     background-size: cover;
     overflow: hidden;
     text-indent: 100%;
@@ -180,7 +180,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(87, 51, 209);
+    background: rgb(55, 33, 214);
     font-size: 22px;
     fill: #fff;
     stroke: #fff;
@@ -192,13 +192,15 @@ input[type="number"]::-webkit-inner-spin-button {
 .coin-btn-title {
     font-size: 15px;
     margin-top: 8px;
-    color: #5733d1;
+    color: #3721d6;
 }
 
 .coin-body {
     margin-top: 20px;
     background: #fff;
     border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #eee;
 }
 
 .main-tools {
@@ -229,7 +231,7 @@ input[type="number"]::-webkit-inner-spin-button {
     height: 3px;
     width: 50%;
     border-radius: 15px;
-    background-color: #5733d1;
+    background-color: #3721d6;
     transition: 0.5s;
     position: absolute;
     bottom: 0;
@@ -245,7 +247,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .main-tools .story-btn.active {
-    color: #5733d1;
+    color: #3721d6;
 }
 
 .main-tools .story-btn {
@@ -396,7 +398,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 #footer .ai {
-    color: #5733d1;
+    color: #3721d6;
 }
 
 #footer a {
@@ -407,7 +409,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #footer a:hover {
     text-decoration: underline;
-    color: #5733d1;
+    color: #3721d6;
 }
 
 
@@ -479,8 +481,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 #user-menu .user-person:hover .user-name,
 #user-menu .user-person:hover .user-person-pic {
-    color: #5733d1;
-    border-color: rgba(87,51,209,.7);
+    color: #3721d6;
+    border-color: rgba(55, 33, 214,.7);
 }
 
 .user-person .user-info {
@@ -709,7 +711,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #5733d1;
+    background-color: #3721d6;
     width: 100%;
     outline: none;
     border: none;

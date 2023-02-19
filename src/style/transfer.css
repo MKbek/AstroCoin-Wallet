@@ -30,7 +30,7 @@
     font-weight: 600;
     padding-top: 5px;
     padding-left: 15px;
-    color: #5733d1;
+    color: #3721d6;
 }
 
 #transfer-page .transfer-userDate {
@@ -115,7 +115,7 @@
 }
 
 #transfer-page .form-control input:focus-visible {
-    box-shadow: 0 0 0 2px rgba(87, 51, 209, .5);
+    box-shadow: 0 0 0 2px rgba(55, 33, 214, .5);
 }
 
 #transfer-page .form-control.submit-btn {
@@ -124,7 +124,7 @@
 
 #transfer-page .form-control.submit-btn button {
     width: 100%;
-    background: #5733d1;
+    background: #3721d6;
     color: #fff;
     font-size: 16px;
     padding: 12px 0;
@@ -142,11 +142,11 @@
 }
 
 #transfer-page .form-control.submit-btn button:hover {
-    background: #4527ae;
+    background: #301db7;
 }
 
 #transfer-page .forgot-pass:hover {
-    color: #4527ae;
+    color: #301db7;
 }
 @media screen and (max-width: 518px) {
     .transfer-header {

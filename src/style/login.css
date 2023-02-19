@@ -30,7 +30,7 @@
   font-weight: 600;
   padding-top: 5px;
   padding-left: 15px;
-  color: #5733d1;
+  color: #3721d6;
 }
 
 #login-page .login-form {
@@ -70,7 +70,7 @@
 }
 
 #login-page .form-control input:focus-visible {
-  box-shadow: 0 0 0 2px rgba(87, 51, 209, .5);
+  box-shadow: 0 0 0 2px rgba(55, 33, 214, .5);
 }
 
 #login-page .form-control.submit-btn {
@@ -79,7 +79,7 @@
 
 #login-page .form-control.submit-btn button {
   width: 100%;
-  background: #5733d1;
+  background: #3721d6;
   color: #fff;
   font-size: 16px;
   padding: 12px 0;
@@ -91,20 +91,20 @@
 }
 
 #login-page .form-control.submit-btn button:hover {
-  background: #4527ae;
+  background: #301db7;
 }
 
 #login-page .forgot-pass {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #5733d1;
+  color: #3721d6;
   width: auto;
   outline: none;
 }
 
 #login-page .forgot-pass:hover {
-  color: #4527ae;
+  color: #301db7;
 }
 
 #oauth-alert {
@@ -183,7 +183,7 @@
 #oauth-alert .form-control.submit-btn button {
   display: block;
   width: calc(100% - 60px);
-  background: #5733d1;
+  background: #3721d6;
   color: #fff;
   margin: 10px 30px;
   font-size: 16px;
@@ -195,7 +195,7 @@
 }
 
 #oauth-alert .form-control.submit-btn button:hover {
-  background: #4527ae;
+  background: #301db7;
 }
 
 

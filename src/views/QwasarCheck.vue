@@ -3,7 +3,7 @@
     <div id="container">
       <div id="login-page">
         <div class="login-header">
-          <div class="app-logo"></div>
+          <div class="corp-logo"></div>
         </div>
         <div class="login-form">
           <div class="login-desc">Enter your Qwasar login</div>

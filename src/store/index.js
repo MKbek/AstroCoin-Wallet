@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
-const URL = 'https://127.0.0.1:8000/api';
+const URL = 'https://api.astrocoin.uz/api';
 Vue.use(Vuex);
 
 
 export default new Vuex.Store({
   state: {
-    url: 'https://127.0.0.1:8000',
+    url: 'https://api.astrocoin.uz',
     errors: null,
     error: null,
     token: null,
@@ -34,11 +34,11 @@ export default new Vuex.Store({
     },
     setToken(state, data) {
       state.token = data.token
-      localStorage.setItem("__astroCoin__accessToken", data.token)
+      localStorage.setItem("token", data.token)
     },
     setUser(state, user) {
       state.user = user
-      localStorage.setItem('__astroCoin_walletToken', user.wallet)
+      localStorage.setItem('__astrocoin_walletToken', user.wallet)
     },
     setWalletHistory(state, history) {
       state.walletHistory = history
@@ -94,7 +94,7 @@ export default new Vuex.Store({
       try {
         await axios.post(`${URL}/logout`, {}, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('removeToken')
@@ -125,7 +125,7 @@ export default new Vuex.Store({
       try {
         const res = await axios.post(`${URL}/wallet`, { address: address }, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('setCheckWallet', res.data)
@@ -138,7 +138,7 @@ export default new Vuex.Store({
       try {
         await axios.post(`${URL}/wallet/transfer`, data, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
       } catch (e) {
@@ -150,7 +150,7 @@ export default new Vuex.Store({
       try {
         await axios.post(`${URL}/user/password`, data, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           }
         })
       } catch (e) {
@@ -178,7 +178,7 @@ export default new Vuex.Store({
       try {
         const res = await axios.get(`${URL}/transfers`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('setWalletHistory', res.data)
@@ -191,7 +191,7 @@ export default new Vuex.Store({
       try {
         const res = await axios.get(`${URL}/orders`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('setOrderHistory', res.data)
@@ -204,7 +204,7 @@ export default new Vuex.Store({
       try {
         const res = await axios.post(`${URL}/user/photo`, data, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('setNewPhoto', res.data);
@@ -217,7 +217,7 @@ export default new Vuex.Store({
       try {
         const res = await axios.get(`${URL}/user`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("__astroCoin__accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
         commit('setUser', res.data)

@@ -3,7 +3,7 @@
     <div id="container">
       <div v-if="active" id="oauth-alert">
         <div class="oauth-alert_animationLoader">
-          <img :src="$store.state.user.m_photo ? $store.state.url + '/storage/' + $store.state.user.m_photo : require(`../assets/default-user-pic.png`)" alt="">
+          <img :src="$store.state.user.m_photo ? $store.state.url + '/storage/' + $store.state.user.m_photo : require(`../assets/default.webp`)" alt="">
         </div>
         <span class="oauth-alert_userFullName">{{ $store.state.user.name }} {{ $store.state.user.last_name[0] }}.</span>
         <span class="oauth-alert_pageTitle">Please wait we will redirect you with your data</span>
@@ -45,15 +45,15 @@ export default {
   data: () => ({
     email: '',
     password: '',
-    active: !!localStorage.getItem('__astroCoin__accessToken')
+    active: !!localStorage.getItem('token')
   }),
    mounted() {
     document.title = 'AstroCoin | OAuth'
-    if (localStorage.getItem('__astroCoin__accessToken')) {
-      if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz/user/oauth') {
+    if (localStorage.getItem('token')) {
+      if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz' || this.$route.query.callback_uri === 'https://store.astrocoin.uz') {
         this.$store.dispatch('getUser', this.$route.fullPath).then(() => {
           setTimeout(() => {
-            window.location.href =`${this.$route.query.callback_uri}?auth_token=${localStorage.getItem('__astroCoin__accessToken')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
+            window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem('token')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
           }, 1000)
         }).catch(() => {
           Toast.fire({
@@ -87,10 +87,10 @@ export default {
           password: this.password
         })
         this.active = true;
-        if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz/user/oauth') {
+        if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz' || this.$route.query.callback_uri === 'https://admin.astrocoin.uz') {
           this.$store.dispatch('getUser', this.$route.fullPath).then(() => {
             setTimeout(() => {
-              window.location.href =`${this.$route.query.callback_uri}?auth_token=${localStorage.getItem('__astroCoin__accessToken')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
+              window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem('token')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
             }, 1500)
           }).catch(() => {
             Toast.fire({

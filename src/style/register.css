@@ -27,7 +27,7 @@
 }
 
 .signup-form .signup-desc .signup-user-fullname {
-  color: rgba(87, 51, 209, 0.66);
+  color: rgba(55, 33, 214, 0.66);
   font-weight: 500;
 
 }
@@ -84,7 +84,7 @@
 
 .form-control select:focus-visible,
 .form-control input:focus-visible {
-  box-shadow: 0 0 0 2px rgba(87, 51, 209, .5);
+  box-shadow: 0 0 0 2px rgba(55, 33, 214, .5);
 }
 
 .form-control.submit-btn {
@@ -93,7 +93,7 @@
 
 .form-control.submit-btn button {
   width: 100%;
-  background: #5733d1;
+  background: #3721d6;
   color: #fff;
   font-size: 16px;
   padding: 12px 0;
@@ -105,20 +105,20 @@
 }
 
 .form-control.submit-btn button:hover {
-  background: #4527ae;
+  background: #301db7;
 }
 
 .forgot-pass {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #5733d1;
+  color: #3721d6;
   width: auto;
   outline: none;
 }
 
 .forgot-pass:hover {
-  color: #4527ae;
+  color: #301db7;
 }
 
 @media screen and (max-width: 518px) {

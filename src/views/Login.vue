@@ -38,7 +38,7 @@ export default {
   }),
   mounted() {
     document.title = 'AstroCoin | Login'
-    if (localStorage.getItem('__astroCoin__accessToken')) {
+    if (localStorage.getItem('token')) {
       this.$router.push(this.$route.query.redirect || '/')
     }
   },

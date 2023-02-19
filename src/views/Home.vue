@@ -124,7 +124,7 @@
         <div class="center-content"></div>
         <div class="right-content">
           <div class="user-menu" @click="openUser">
-            <img :src="user.photo ? this.$store.state.url + user.photo : require(`../assets/default-user-pic.png`)" class="user-pic" alt="">
+            <img :src="user.photo ? this.$store.state.url + user.photo : require(`../assets/default.webp`)" class="user-pic" alt="">
           </div>
         </div>
       </div>
@@ -210,7 +210,7 @@
           <div class="story" :class="{'transfer': activeItem === 'story-transfers', 'buy': activeItem === 'story-buy'}">
             <div id="story-transfers">
               <div style="display: flex; justify-content: center;">
-                <bounce-loader :loading="loading" :color="'#5733d1'"></bounce-loader>
+                <bounce-loader :loading="loading" :color="'#3721d6'"></bounce-loader>
               </div>
               <div class="card" v-for="(history, date) in walletHistory" :key="date">
                 <div class="transfers-date">
@@ -227,12 +227,12 @@
                 </div>
               </div>
               <div style="display: flex; justify-content: center;">
-                <bounce-loader :loading="loadHistory" :color="'#5733d1'"></bounce-loader>
+                <bounce-loader :loading="loadHistory" :color="'#3721d6'"></bounce-loader>
               </div>
             </div>
             <div id="story-buy">
               <div style="display: flex; justify-content: center;">
-                <bounce-loader :loading="loading" :color="'#5733d1'"></bounce-loader>
+                <bounce-loader :loading="loading" :color="'#3721d6'"></bounce-loader>
               </div>
               <div class="card" v-for="(history, date) in storeHistory" :key="date">
                 <div class="transfers-date">
@@ -249,7 +249,7 @@
                 </div>
               </div>
               <div style="display: flex; justify-content: center;">
-                <bounce-loader :loading="loadHistory" :color="'#5733d1'"></bounce-loader>
+                <bounce-loader :loading="loadHistory" :color="'#3721d6'"></bounce-loader>
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default {
           this.page++
           const res = await axios.get(`https://api.astrocoin.uz/api/transfers?page=${this.page}`, {
             headers: {
-              'Authorization': `Bearer ${localStorage.getItem('__astroCoin__accessToken')}`
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
           })
           this.count = 0

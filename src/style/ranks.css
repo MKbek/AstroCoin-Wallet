@@ -26,7 +26,7 @@
     font-weight: 600;
     padding-top: 5px;
     padding-left: 15px;
-    color: #5733d1;
+    color: #3721d6;
 }
 
 #ranks .ranks-body {
@@ -59,6 +59,10 @@
     border-radius: 15px;
 }
 
+#ranks .row .col {
+    box-shadow: 0 0 15px #eee;
+}
+
 #ranks .col-2 {
     flex-grow: 2 !important;
 }
@@ -73,7 +77,7 @@
 }
 
 #ranks .rank-title {
-    color: #5733d1;
+    color: #3721d6;
     font-weight: 500;
     font-size: 25px;
     margin-bottom: 10px;

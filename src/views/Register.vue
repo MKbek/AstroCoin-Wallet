@@ -59,7 +59,7 @@ export default {
   }),
   async mounted() {
     document.title = 'AstroCoin | Registration'
-    if (localStorage.getItem('__astroCoin__accessToken')) {
+    if (localStorage.getItem('token')) {
       this.$router.push('/')
     }
     await this.$store.dispatch('getStack')
