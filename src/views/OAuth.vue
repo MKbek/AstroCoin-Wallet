@@ -13,7 +13,9 @@
       </div>
       <div v-else id="login-page">
         <div class="login-header">
-          <div class="store-logo"></div>
+          <div class="store-logo" v-if="this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de'"></div>
+          <div class="corp-logo" v-else-if="this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d'"></div>
+          <div class="app-logo" v-else></div>
         </div>
         <div class="login-form">
           <div class="login-desc">AstroCoin wallet, login to your account</div>
@@ -45,15 +47,15 @@ export default {
   data: () => ({
     email: '',
     password: '',
-    active: !!localStorage.getItem('token')
+    active: !!localStorage.getItem("__asc_accessIDToken")
   }),
    mounted() {
     document.title = 'AstroCoin | OAuth'
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem("__asc_accessIDToken")) {
       if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz' || this.$route.query.callback_uri === 'https://store.astrocoin.uz') {
         this.$store.dispatch('getUser', this.$route.fullPath).then(() => {
           setTimeout(() => {
-            window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem('token')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
+            window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem("__asc_accessIDToken")}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
           }, 1000)
         }).catch(() => {
           Toast.fire({
@@ -90,7 +92,7 @@ export default {
         if (this.$route.query.app_id === '497fdd5c-3b8f-4b1a-9c1a-8c1a8c1a8c1a' && this.$route.query.app_hash === 'ba5b0af2688d31cf34d3b50b1b1bf8bb7c1deb7cf0c5774316f1ba4d' || this.$route.query.app_hash === '20666ef4fc9e52c8a3fb3a57bab05afb7ca1744f4a939748d7436e8bf51fd6de' && this.$route.query.callback_uri === 'https://store.astrocoin.uz' || this.$route.query.callback_uri === 'https://admin.astrocoin.uz') {
           this.$store.dispatch('getUser', this.$route.fullPath).then(() => {
             setTimeout(() => {
-              window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem('token')}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
+              window.location.href =`${this.$route.query.callback_uri}/user/oauth?auth_token=${localStorage.getItem("__asc_accessIDToken")}&base_data=${window.btoa(unescape(encodeURIComponent(JSON.stringify(this.$store.state.user))))}`
             }, 1500)
           }).catch(() => {
             Toast.fire({
@@ -114,3 +116,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+@import url('@/style/login.css');
+</style>

@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 @import url('./apperance.css');
-@import url('./ranks.css');
-@import url('./login.css');
-@import url('./register.css');
-@import url('./transfer.css');
-@import url('./userpage.css');
-
 
 input[type="number"]::-webkit-inner-spin-button {
     display: none;
     -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
 }
 
 .swal2-container {
@@ -57,9 +55,10 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
     flex-grow: 0;
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 10px;
     width: 50vw;
+    max-width: 725px;
 }
 
 .left-content {
@@ -125,6 +124,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #main {
     width: 50vw;
+    max-width: 725px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -208,7 +208,7 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: center;
     flex-direction: row;
     border-radius: 15px;
-    padding: 10px 5px;
+    padding: 8px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -257,7 +257,7 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: center;
     text-align: center;
     padding: 12px;
-    margin: 0 5px;
+    font-size: 18px;
     color: #bababa;
     border-radius: 12px;
 }
@@ -420,9 +420,14 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 10px;
     position: absolute;
     width: 50vw;
+    max-width: 725px;
 }
 
+#modal-back {
+    display: none;
+}
 #modal-back.active {
+    display: block;
     background: rgba(0,0,0,.25);
     position: fixed;
     top: 0;
@@ -445,7 +450,7 @@ input[type="number"]::-webkit-inner-spin-button {
     box-shadow: 0 0 15px #ccc;
     position: absolute;
     top: 95px;
-    right: 0;
+    right: 15px;
     z-index: 8;
 }
 
@@ -496,11 +501,6 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
 }
 
-.user-info .user-name svg {
-    margin-left: 5px;
-    margin-top: 0.25px;
-}
-
 .user-info .user-email {
     font-size: 15px;
     color: #bababa;
@@ -537,7 +537,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
     box-shadow: 0 0 15px #c2c2c2;
     position: absolute;
-    top: 155px;
+    top: 5vw;
     z-index: 8;
 }
 
@@ -551,7 +551,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
     box-shadow: 0 0 15px #c2c2c2;
     position: absolute;
-    top: 155px;
+    top: 5vw;
     z-index: 8;
 }
 
@@ -601,20 +601,20 @@ input[type="number"]::-webkit-inner-spin-button {
 #log-out.active {
     visibility: visible;
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .modal-header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .modal-header .modal-title {
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -626,6 +626,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .modal-header .modal-tools .ai {
     font-size: 20px;
     cursor: pointer;
+    background: #d5d5d5;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 .modal-body {
@@ -637,8 +642,8 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     padding: 8px;
     border-radius: 15px;
 }
@@ -662,18 +667,20 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .modal-body input {
     border: none;
-    min-width: 240px;
+    min-width: 340px;
     background-color: #fff;
     outline: none;
     padding: 10px 12px;
     border-radius: 8px;
+    font-size: 18px;
 }
 
 .modal-body .send-comment textarea {
     border: none;
-    min-width: 240px;
-    max-width: 240px;
-    min-height: 100px;
+    min-width: 340px;
+    max-width: 340px;
+    min-height: 150px;
+    font-size: 18px;
     background-color: #fff;
     outline: none;
     padding: 10px 12px;
@@ -681,21 +688,27 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .modal-body .receive-hash .ai {
-    margin-top: 10px;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 18px;
     color: #aaa;
     background: #fff;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: -2px 0px 5px 5px #fff;
+    box-shadow: -6px 0 5px 1px #fff;
     position: absolute;
-    right: 30px;
+    right: 24px;
 }
 
 .modal-body .send-hash .ai {
-    margin-top: 10px;
+    padding: 10px;
+    font-size: 22px;
     color: #aaa;
+    background: #ffffff;
+    border-radius: 8px;
     cursor: pointer;
     position: absolute;
-    right: 30px;
+    right: 20px;
 }
 
 .modal-body .receive-share {
@@ -703,7 +716,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .modal-body .receive-share .share-btn i {
-    font-size: 20px;
+    font-size: 22px;
     margin-left: 5px;
 }
 
@@ -716,7 +729,7 @@ input[type="number"]::-webkit-inner-spin-button {
     outline: none;
     border: none;
     color: #fff;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     border-radius: 10px;
 }
@@ -732,14 +745,14 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
     box-shadow: 0 0 15px #c2c2c2;
     position: absolute;
-    top: 155px;
+    top: 5vw;
     z-index: 8;
 }
 
 #send-coin.active {
     visibility: visible;
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 #send-coin .modal-body .user-info {
@@ -808,14 +821,14 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: scale(0.9);
     box-shadow: 0 0 15px #c2c2c2;
     position: fixed;
-    top: 95px;
+    top: 8vw;
     z-index: 8;
 }
 
 #cheque-coin.active {
     visibility: visible;
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 #cheque-coin .modal-body {
@@ -964,9 +977,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 div .verify-ion {
+    display: inline-block;
     width: 18px;
     height: 18px;
+    border: none;
     position: relative;
+    background: transparent;
+    padding: 6px 0 0;
     margin-left: 5px;
 }
 
@@ -975,48 +992,46 @@ div .verify-ion {
     top: -6px;
 }
 
-.verify-ion:hover .verification-toolTips {
+.verify-ion:focus .verification-toolTips {
     margin-top: 5px;
     opacity: 1;
     visibility: visible;
 }
 
 .verify-ion .verification-toolTips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     text-align: center;
-    width: 140px;
+    width: 210px;
     margin-top: 10px;
-    margin-left: -80px;
-    font-size: 13px;
+    margin-left: -120px;
+    font-size: 14px;
     color: #999;
     -webkit-text-fill-color: #999;
     background: #fff;
-    border-radius: 8px;
-    padding: 8px 15px 8px 8px;
+    border-radius: 15px;
+    padding: 20px 15px;
     box-shadow: 0 0 10px #ccc;
-    position: fixed;
+    position: absolute;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
 }
 
-.verify-ion .verification-toolTips::after {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: transparent transparent #ffffff transparent;
+.verify-ion .verification-toolTips .toolTips-title {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    -webkit-text-fill-color: #000;
 }
 
 @media screen and (max-width: 1370px) {
-    #header, #main, #modals {
-        width: 70vw;
-    }
     #cheque-coin {
         width: 30vw;
     }
@@ -1049,5 +1064,31 @@ div .verify-ion {
     }
     .main-tools .story-btn:hover {
         background: transparent !important;
+    }
+
+    #full-screen-ads {
+        padding: 0 15px;
+    }
+
+    #full-screen-ads .ads-favicon {
+        width: 100px;
+        height: 100px;
+    }
+
+    #full-screen-ads .ads-title {
+        margin-top: 15px;
+        font-size: 22px;
+    }
+
+    #full-screen-ads .ads-description {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #receive-coin, #send-coin, #cheque-coin {
+        justify-content: center;
+        width: 100%;
     }
 }

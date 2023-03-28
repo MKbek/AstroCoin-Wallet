@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import Vuelidate from 'vuelidate'
 import VueSweetalert2 from 'vue-sweetalert2'
+import { VueMaskDirective } from "v-mask"
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import BounceLoader from 'vue-spinner/src/BounceLoader.vue'
 import qrcodeVue from 'qrcode.vue'
@@ -15,6 +16,7 @@ import store from './store'
 Vue.config.productionTip = false
 Vue.use(Vuelidate)
 Vue.use(VueSweetalert2)
+Vue.directive('mask', VueMaskDirective)
 Vue.component('qrcode-vue', qrcodeVue)
 Vue.component('bounce-loader', BounceLoader)
 

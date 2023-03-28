@@ -92,6 +92,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('@/style/login.css');
 .login-page #container {
   display: flex;
   justify-content: center !important;

@@ -38,7 +38,7 @@ export default {
   }),
   mounted() {
     document.title = 'AstroCoin | Login'
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('__asc_accessIDToken')) {
       this.$router.push(this.$route.query.redirect || '/')
     }
   },
@@ -76,3 +76,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+@import url('@/style/login.css');
+</style>

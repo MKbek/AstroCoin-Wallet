@@ -88,6 +88,11 @@
     text-align: center;
 }
 
+#user-app .user-fullname .verify-ion {
+    position: relative;
+    top: 6px;
+}
+
 #user-app .user-email {
     margin-top: 8px;
     font-size: 22px;

@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('@/style/login.css');
 #container {
   height: 97vh;
   justify-content: center;

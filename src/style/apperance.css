@@ -77,6 +77,32 @@ textarea {
     resize: none;
 }
 
+#app-preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+#app-preloader .app-brand {
+    width: 170px;
+}
+
+#app-preloader .app-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Scroll Bar Style */
 
 ::-webkit-scrollbar {

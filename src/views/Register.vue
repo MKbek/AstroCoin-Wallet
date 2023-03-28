@@ -7,34 +7,34 @@
       <form action="#" method="post" class="form-modal" @submit.prevent="submit">
         <div class="signup-form">
           <div class="signup-desc">Hooray <span class="signup-user-fullname">{{ $route.query.name }} {{ $route.query.last_name }}</span>, we're almost done. Make sure that you have entered all the data correctly</div>
-          <input type="text" name="" id="first_name" v-model="$route.query.name" hidden readonly>
-          <input type="text" name="" id="last_name" v-model="$route.query.last_name" hidden readonly>
+          <input type="text" id="first_name" v-model="$route.query.name" hidden readonly>
+          <input type="text" id="last_name" v-model="$route.query.last_name" hidden readonly>
           <div class="form-control">
             <label for="qlogin">Qwasar Login:</label>
-            <input type="text" name="" id="qlogin" v-model="$route.query.qwasar" readonly>
+            <input type="text" id="qlogin" v-model="$route.query.qwasar" readonly>
           </div>
           <div class="form-control">
             <label for="qlogin">Email:</label>
-            <input type="text" name="" id="qlogin" v-model="$route.query.email" readonly>
+            <input type="text" id="qlogin" v-model="$route.query.email" readonly>
           </div>
           <div class="form-control">
             <label for="phone">Phone:</label>
-            <input type="number" name="" id="phone" v-model="number">
+            <input type="text" v-mask="'+998 (##) ###-##-##'" id="phone" v-model="number">
           </div>
           <div class="form-control">
             <label for="stack">Stack:</label>
-            <select name="" id="stack" v-model="stack">
+            <select id="stack" v-model="stack">
               <option :value="item.id" v-for="item in stacks" :key="item.id">{{ item.title }}</option>
             </select>
           </div>
           <div class="double-input">
             <div class="form-control">
               <label for="password">Password:</label>
-              <input type="password" name="" id="password" v-model="password">
+              <input type="password" id="password" v-model="password">
             </div>
             <div class="form-control">
               <label for="last_name">Confirm:</label>
-              <input type="password" name="" id="password_confirm" v-model="confirm">
+              <input type="password" id="password_confirm" v-model="confirm">
             </div>
           </div>
           <div class="form-control submit-btn">
@@ -48,8 +48,10 @@
 
 <script>
 import { required, sameAs, minLength } from 'vuelidate/src/validators'
+import UserStatusBlocked from "@/components/UserStatusBlocked.vue";
 export default {
   name: "Register",
+  components: {UserStatusBlocked},
   data: () => ({
     number: '',
     stack: '',
@@ -118,6 +120,7 @@ export default {
 }
 </script>
 <style scoped>
+@import url('@/style/register.css');
 #container {
   height: 97vh;
   justify-content: center;

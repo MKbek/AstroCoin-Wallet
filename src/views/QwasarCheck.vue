@@ -68,3 +68,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+@import url('@/style/login.css');
+</style>
