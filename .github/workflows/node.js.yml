@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - build
 
 jobs:
   build:
@@ -17,22 +16,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16.x
 
-      - name: Install dependencies
+      - name: Install dependencies NPM
         run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Publish to build branch
+      - name: Deploy to branch
+        uses: s0/git-publish-subdir-action@develop
         env:
-          PERSONAL_ACCESS_TOKEN: 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
-        run: |
-          git config --global user.name "Muhammadiy"
-          git config --global user.email "muhammad.700@inbox.ru"
-          git checkout -b build
-          git add .
-          git commit -m "Publish build"
-          git remote set-url origin https://github.com/MKbek/AstroCoin-Wallet.git
-          git push origin build
+          REPO: self
+          BRANCH: build
+          FOLDER: dist
+          GITHUB_TOKEN: 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
