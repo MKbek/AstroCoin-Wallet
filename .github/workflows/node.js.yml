@@ -26,10 +26,9 @@ jobs:
 
       - name: Publish to build branch
         run: |
+          git config --global user.name "Muhammadiy"
+          git config --global user.email "muhammad.700@inbox.ru"
           git checkout -b build
-          git push origin build
-          rm -rf *
-          mv dist/* .
           git add .
           git commit -m "Publish build"
           git push origin build
