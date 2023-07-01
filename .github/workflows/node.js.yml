@@ -25,10 +25,13 @@ jobs:
         run: npm run build
 
       - name: Publish to build branch
+        env:
+          PERSONAL_ACCESS_TOKEN: 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
         run: |
           git config --global user.name "Muhammadiy"
           git config --global user.email "muhammad.700@inbox.ru"
           git checkout -b build
           git add .
           git commit -m "Publish build"
+          git remote set-url origin https://github.com/MKbek/AstroCoin-Wallet.git
           git push origin HEAD:build
