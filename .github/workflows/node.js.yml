@@ -26,8 +26,8 @@ jobs:
 
       - name: Publish to build branch
         run: |
-          git checkout build
-          git pull origin build
+          git checkout -b build
+          git push origin build
           rm -rf *
           mv dist/* .
           git add .
