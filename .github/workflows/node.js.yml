@@ -30,8 +30,8 @@ jobs:
         run: |
           git config --global user.name "Muhammadiy"
           git config --global user.email "muhammad.700@inbox.ru"
-          git checkout -b build
+          git checkout -b origin build
           git add .
           git commit -m "Publish build"
           git remote set-url origin https://github.com/MKbek/AstroCoin-Wallet.git
-          git push origin HEAD:build
+          git push origin build
