@@ -30,4 +30,4 @@ jobs:
           REPO: self
           BRANCH: build
           FOLDER: dist
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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
