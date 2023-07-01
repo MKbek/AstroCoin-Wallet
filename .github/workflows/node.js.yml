@@ -31,4 +31,4 @@ jobs:
           git checkout -b build
           git add .
           git commit -m "Publish build"
-          git push origin build
+          git push origin HEAD:build
