@@ -1,8 +1,8 @@
 # These are supported funding model platforms
 
-github: sombra-llc
-patreon: mkbek
-open_collective: sombra
+github: mkbek
+patreon: # mkbek
+open_collective: # sombra
 ko_fi: # Replace with a single Ko-fi username
 tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
 community_bridge: AstroCoin-Wallet
@@ -10,4 +10,4 @@ liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
 lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
-custom: ['https://www.buymeacoffee.com/mbek', 'https://payme.uz/@muhammadiy_k']
+custom: ['https://payme.uz/@muhammadiy_k']
